@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abandoned, But Not Forgotten | NASA Space Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="stars-bg"></div>
+
+    <header class="hero">
+        <div class="badge">NASA SPACE APPS CHALLENGE // ARCHIVE 042</div>
+        <h1>ABANDONED, BUT NOT FORGOTTEN</h1>
+        <p class="subtitle">Interactive Telemetry & Visual Logs of Humanity's Silent Sentinels in the Cosmos</p>
+        <a href="#experience" class="btn-primary">INITIALIZE ARCHIVE ↓</a>
+    </header>
+
+    <main id="experience" class="container">
+        <!-- Chapter Navigation -->
+        <nav class="chapter-nav">
+            <button class="chapter-btn active" onclick="loadChapter(0)">01 // DEEP SPACE LOG (SCINEWS)</button>
+            <button class="chapter-btn" onclick="loadChapter(1)">02 // THE MARS ROVER SILENCE</button>
+            <button class="chapter-btn" onclick="loadChapter(2)">03 // GRAVEYARD ORBIT</button>
+        </nav>
+
+        <!-- Interactive Story Viewer -->
+        <section class="story-card">
+            <div class="media-container">
+                <!-- Embedded YouTube Player -->
+                <div class="video-wrapper" id="video-box">
+                    <iframe id="story-video" 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" 
+                        title="Space Archive Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="telemetry-bar">
+                    <span id="mission-status">STATUS: SIGNAL LOST</span>
+                    <span id="mission-coords">COORDINATES: DEEP SPACE // SECTOR 7</span>
+                </div>
+            </div>
+
+            <div class="story-content">
+                <h2 id="chapter-title">Chapter 01: Echoes Beyond the Heliopause</h2>
+                <p id="chapter-date" class="date-tag">LOG DATE: 2026.11.12 // SOURCE: SCINEWS ARCHIVE</p>
+                <p id="chapter-text">
+                    Millions of kilometers from Earth, instruments built by human hands continue to drift through the dark. Their batteries depleted and dishes turned away from home, they remain silent monuments to our curiosity. Watch the archival telemetry feed to witness the final data transmissions before hibernation.
+                </p>
+                
+                <!-- Interactive Decision / Reflection Prompt -->
+                <div class="interactive-prompt">
+                    <p><strong>ARCHIVE TERMINAL QUERY:</strong> How should future missions treat derelict spacecraft?</p>
+                    <div class="choice-buttons">
+                        <button class="btn-choice" onclick="showOutcome('preserve')">Preserve as Orbital Museums</button>
+                        <button class="btn-choice" onclick="showOutcome('salvage')">Salvage & Recycle Materials</button>
+                    </div>
+                    <p id="choice-feedback" class="feedback-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Grid -->
+        <section class="gallery-section">
+            <h3>RECOVERED VISUAL ARTIFACTS</h3>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Orbital Debris">
+                    <div class="caption">FIG 1.1: Low Earth Orbit Tracking</div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=600&q=80" alt="Mars Surface">
+                    <div class="caption">FIG 1.2: Martian Dust Storm Aftermath</div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80" alt="Deep Space">
+                    <div class="caption">FIG 1.3: Last Known Telemetry Vector</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built for NASA Space Apps Challenge // Theme: Abandoned, But Not Forgotten</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
